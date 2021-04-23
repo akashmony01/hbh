@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    /* importing fonts */
+    @font-face {
+        font-family: pompiere;
+        src: url('fonts/Pompiere/Pompiere-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: raleway-light;
+        src: url('fonts/Raleway/Raleway-Light.ttf');
+    }
+
+    @font-face {
+        font-family: raleway-regular;
+        src: url('fonts/Raleway/Raleway-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: raleway-medium;
+        src: url('fonts/Raleway/Raleway-Medium.ttf');
+    }
+
+    @font-face {
+        font-family: raleway-semibold;
+        src: url('fonts/Raleway/Raleway-SemiBold.ttf');
+    }
+
+    @font-face {
+        font-family: raleway-bold;
+        src: url('fonts/Raleway/Raleway-Bold.ttf');
+    }
+
+    @font-face {
+        font-family: raleway-black;
+        src: url('fonts/Raleway/Raleway-Black.ttf');
+    }
+
+    html,
+    body{
+        scroll-behavior: smooth;
+        @apply font-ralewayRegular text-primary;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        @apply font-pompiere;
+    }
+
+    p{
+        @apply text-cFsXs md:text-cFsXs2 leading-loose mb-6;
+    }
+
+    a{
+        @apply duration-300 hover:opacity-80;
+    }
+}
+
+
+/* customize owl theme */
+.owl-carousel .owl-dots .owl-dot:focus{
+    outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot span{
+    width: 15px;
+    height: 15px;
+    @apply bg-white hover:bg-primary border border-primary;
+}
+
+.owl-carousel .owl-dots .owl-dot.active span{
+    @apply bg-primary;
+}
